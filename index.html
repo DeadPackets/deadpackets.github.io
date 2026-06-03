@@ -508,6 +508,8 @@ h1.title .gl { color: var(--accent); }
   flex: none;
 }
 .stars svg { width: 13px; height: 13px; }
+/* a class `display` on .stars overrides [hidden]'s UA display:none — restore it so 0-star placeholders stay hidden */
+.stars[hidden] { display: none !important; }
 
 .live {
   display: inline-flex; align-items: center; gap: 6px;
